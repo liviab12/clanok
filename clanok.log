@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.17)  25 OCT 2024 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.17)  26 OCT 2024 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -309,62 +309,67 @@ File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 33.
 
-No file clanok.bbl.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [1
 
 {C:/Users/HP/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<3models.png, id=59, 528.97626pt x 197.73875pt>
+File: 3models.png Graphic file (type png)
+<use 3models.png>
+Package pdftex.def Info: 3models.png  used on input line 74.
+(pdftex.def)             Requested size: 264.48747pt x 98.86913pt.
 
-[2] (clanok.aux)
+
+[2 <./3models.png>]
+<diagram.png, id=69, 768.8725pt x 432.61626pt>
+File: diagram.png Graphic file (type png)
+<use diagram.png>
+Package pdftex.def Info: diagram.png  used on input line 93.
+(pdftex.def)             Requested size: 384.4353pt x 216.3076pt.
+
+Overfull \hbox (39.4353pt too wide) in paragraph at lines 93--94
+ [][] 
+ []
+
+
+
+[3 <./diagram.png>]
+No file clanok.bbl.
+
+
+[4] (clanok.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
-
-
-Package rerunfilecheck Warning: File `clanok.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `clanok.out':
-(rerunfilecheck)             Before: 1153142943DC0B245BBD737596AF1FC5;1033
-(rerunfilecheck)             After:  6DFD525292E35386E953CFB889757EE4;696.
+Package rerunfilecheck Info: File `clanok.out' has not changed.
+(rerunfilecheck)             Checksum: 9B76733A4B5E76DDB21DA6923A31E98F;1203.
  ) 
 Here is how much of TeX's memory you used:
- 10180 strings out of 473898
- 161033 string characters out of 5727894
- 569797 words of memory out of 5000000
- 32925 multiletter control sequences out of 15000+600000
- 568453 words of font info for 61 fonts, out of 8000000 for 9000
+ 10209 strings out of 473898
+ 161511 string characters out of 5727894
+ 570693 words of memory out of 5000000
+ 32949 multiletter control sequences out of 15000+600000
+ 569364 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,531b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsection.3.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
- <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi720\csbx12
-.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\cs
-sl10.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi60
-0\csr10.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dp
-i600\csr8.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\tcrm0600.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfon
-ts/dpi600\csbx9.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cs
-fonts/dpi600\cstt9.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public
-/csfonts/dpi600\csr9.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/publ
-ic/csfonts/dpi600\csr12.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\tcrm1200.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/public/csfonts/dpi600\csr17.pk>
-Output written on clanok.pdf (2 pages, 78995 bytes).
+ 75i,7n,79p,926b,493s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm100
+0.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\c
+sbx12.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi6
+00\cssl10.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/
+dpi600\csr8.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\tcrm0600.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csf
+onts/dpi600\csr10.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/public/
+csfonts/dpi720\csbx12.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/pub
+lic/csfonts/dpi600\csbx9.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfour/
+public/csfonts/dpi600\cstt9.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/public/csfonts/dpi600\csr9.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk/lj
+four/public/csfonts/dpi600\csr12.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts/pk
+/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\HP\AppData\Local\MiKTeX\fonts
+/pk/ljfour/public/csfonts/dpi600\csr17.pk>
+Output written on clanok.pdf (4 pages, 220449 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 12 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 453 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

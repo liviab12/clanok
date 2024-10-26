@@ -34,38 +34,90 @@
 \begin{abstract}
 Cieľom článku je preskúmať a analyzovať odporúčacie systémy, ktoré Instagram používa na personalizáciu obsahu v jeho hlavných častiach: Feed, Explore a Reels. Článok sa zameria na to, ako algoritmy spracovávajú používateľské dáta, interakcie a preferencie na základe predchádzajúceho správania používateľov, aby efektívne odporúčali relevantný obsah.
 
-V prvej časti článku sa budeme venovať časti aplikácie zvanej Feed, kde sa používateľom zobrazujú príspevky účtov, ktoré sledujú, doplnené príspevkami iných účtov, o ktoré môžu mať používatelia Instagramu záujem, a sponzorovanými príspevkami. Preskúmame, ako Instagram analyzuje interakcie s príspevkami, aby vytvoril personalizovaný prúd obsahu, a aké faktory ovplyvňujú jeho algoritmus, vrátane času stráveného na príspevku a počtu lajkov a komentárov.
+Prvá časť článku sa zameria na odporúčacie algoritmy sociálnych sietí, kde vysvetlíme ako všeobecne funguje odporúčanie obsahu na sociálnych sieťach, ktoré sa prejavuje aj v aplikácii Instagram. Na vysvetlenie tohto procesu predstavíme modely šírenia informácií a vysvetlíme metódy strojového učenia.
 
-Druhá časť sa zameria na Explore, kde preskúmame, aké techniky a algoritmy Instagram používa na identifikáciu nového obsahu, ktorý by mohol používateľov zaujať. Bude sa skúmať, ako sa algoritmy učia z užívateľských preferencií a akú úlohu zohráva strojové učenie pri odporúčaní obsahu.
+V druhej časti článku sa budeme venovať časti aplikácie zvanej Feed, kde sa používateľom zobrazujú príspevky účtov, ktoré sledujú, doplnené príspevkami iných účtov, o ktoré môžu mať používatelia Instagramu záujem, a sponzorovanými príspevkami.
+
+Tretia časť sa zameria na Explore, kde preskúmame, aké techniky a algoritmy Instagram používa na identifikáciu nového obsahu, ktorý by mohol používateľov zaujať.
 
 Nakoniec sa zameriame na Reels, kde budeme analyzovať, aké faktory prispievajú k populárnosti a odporúčaniu videí. Preskúmame, ako algoritmy zohľadňujú trendy, dĺžku videí a interakcie používateľov pri hodnotení relevancie obsahu.
+
+
 
 \end{abstract}
 
 
 
 \section{Úvod}
+Sociálne siete sa stali jednou z najdominantnejších platforiem, ktoré denne ovplyvňujú milióny ľudí po celom svete. Jednou z hlavných výziev, ktorým čelia takéto platformy, je udržanie pozornosti používateľov a poskytovanie obsahu, ktorý je pre nich osobne relevantný. Instagram, ako jedna z najpopulárnejších sociálnych sietí, využíva na tento účel odporúčacie systémy. Tieto algoritmy analyzujú správanie používateľov a ich interakcie s obsahom, aby mohli personalizovať obsah a zlepšovať používateľský zážitok. Základné fungovanie odporúčacích systémov sociálnych sietí, ktoré sa týkajú aj samotného Instagramu je vysvetlené v časti~\ref{druha}.
 
+Instagram nemá jeden jedinečný algoritmus pre celú aplikáciu, každá časť aplikácie - Feed, Explore a Reels používa svoj vlastný algoritmus pre odporúčanie obsahu, prispôsobený tomu ako ju ľudia používajú a čo udrží ich pozornosť v tejto sekcii aplikácie najdlhšie. Podrobnejšie súvislosti týkajúce sa algoritmov v daných častiach Instagramu sú uvedené postupne v častiach~\ref{tretia},~\ref{stvrta} a~\ref{piata}. Záverečné zhrnutie najdôležitejších súvislostí a zistení prináša časť~\ref{siesta}.
 
-
-\section{Odporúčacie algoritmy sociálnych sietí} \label{nejaka}
-
-
-\section{Feed} \label{ina}
-
-
-
-
-\section{Explore} \label{dolezita}
+Prostredníctvom tejto analýzy jednotlivých častí aplikácie chceme poskytnúť ucelený prehľad o tom, ako Instagram formuje používateľskú skúsenosť a aké techniky, nástroje a prístupy využíva na dosiahnutie efektívneho a personalizovaného odporúčania obsahu.
 
 
 
 
-\section{Reels} \label{dolezitejsia}
+\section{Odporúčacie algoritmy sociálnych sietí} \label{druha}
+
+\subsection{Typy šírenia informácií na sociálnych sieťach} 
+Sociálne siete medzi ktoré patrí aj aplikácia Instagram využívajú na šírenie obsahu na platforme tri typy šírenia informácií - odber, sieť a algoritmus (1).
+
+Model odberu predstavuje situáciu, kedy sa príspevok dostane k tým používateľom, ktorý odberajú daný profil na sociálnej sieti. Na Instagrame sa nám teda zobrazí príspevok profilu, ktorý máme medzi sledovanými účtami.
+
+V sieťovom modeli dochádza k šíreniu obsahu sieťou prostredníctvom zdieľania toho istého príspevku ďalším používateľom na svojom profile. V aplikácii Instagram to predstavuje situáciu kedy označíme v nami pridanom príspevku aj iných používateľov a následne sa náš príspevok dostáva aj k ich sledovateľom.
+
+Algoritmický model odporúča príspevky o ktorých algoritmus predpovedá, že s najväčšou pravdepodobnosťou zaujmú používateľa a motivujú ho k ďalšej aktivite na platforme. Využíva na to metódy strojového učenia a v súčasnosti patrí medzi popredný model rozhodujúci o spôsobe odporúčania obsahu na sociálnych sieťach.
+
+\begin{figure*}[tbh]
+\centering
+\includegraphics[scale=.5]{3models.png}
+\caption{Modely šírenia informácií na sociálnych sieťach: odber, sieť, internet (1)}
+\end{figure*}
+
+\subsection{Metódy strojového učenia} 
+Odporúčacie algoritmy zohrávajú zásadnú úlohu v tom, ako sa používateľom sociálnych sietí filtruje a objavuje relevantný obsah na platforme. Tieto algoritmy pracujú na základe údajov o správaní používateľov ako sú interakcie, lajky, komentáre, prezeranie profilov, zdieľanie príspevkov, či čas strávený sledovaním určitých videí a vytvárajú sa tak personalizované odporúčania pre každého konkrétneho používateľa s cieľom udržať ho na platforme čo najdlhšie. 
+
+V pozadí tohto procesu stoja metódy strojového učenia:
+\begin{itemize}
+\item kolaboratívne filtrovanie
+\item obsahové filtrovanie
+\item hybridné filtrovanie
+\item demografické filtrovanie (2)
+\end{itemize}
 
 
 
-\section{Záver} \label{zaver} % prípadne iný variant názvu
+\begin{figure*}[tbh]
+\centering
+\includegraphics[scale=.5]{diagram.png}
+\caption{Odporúčanie obsahu na sociálnych sieťach}
+\end{figure*}
+
+Kolaboratívne filtrovanie je metóda odporúčania, ktorá analyzuje správanie podobných používateľov s cieľom odporučiť obsah inému používateľovi na základe toho, čo sa páči ostatným používateľom s podobnými záujmami (3). Napríklad, ak sa veľa používateľov, ktorí lajkujú a sledujú podobné príspevky ako daný používateľ, začne zaujímať o konkrétny typ obsahu (napr. príspevky s určitým hashtagom), algoritmus to zachytí a ponúkne tento obsah aj jemu. Týmto spôsobom sa Instagram snaží predpovedať, čo by mohlo používateľa zaujať.
+
+Obsahové filtrovanie sa zameriava na vlastnosti obsahu, s ktorým používateľ už interagoval, pričom algoritmus analyzuje a vyberá ďalší obsah so zhodnými charakteristikami. To v praxi znamená, že vyberá ďalšie príspevky na základe ich podobnosti s inými príspevkami, ktoré používateľa zaujali v minulosti. (4) Ak napríklad používateľ často lajkuje príspevky s cestovateľskými fotografiami alebo sleduje videá o varení, algoritmus Instagramu zaznamená tieto preferencie a následne zobrazí viac podobného obsahu. Na kategorizáciu a identifikáciu príspevkov a videí s podobným obsahom využíva hashtagy ako aj samotný popis príspevku. Výsledkom je, že používateľ vidí častejšie príspevky totožné s jeho záujmami a preferenciami.
+
+Hybridné filtrovanie kombinuje kolaboratívne a obsahové filtrovanie za účelom väčšej presnosti a lepšej účinnosti odporúčacieho procesu. Súčasne analyzuje podobnosť správania medzi používateľmi a podobnosť medzi zdieľaným obsahom a nami sledovaným obsahom a následne hľadá najväčšiu zhodu a tým predpovedá čo môže používateľa najviac zaujať (5).
+
+Demografické filtrovanie využíva na odporúčanie obsahu demografické údaje poskytnuté používateľom, ako je vek, pohlavie, poloha či jazyk. Hlavná nevýhoda tohoto typu strojového učenia spočíva v tom, že ľudia v online priestore nechcú zdieľať svoje osobné údaje alebo ich neuvádzajú pravdivo zo strachu z ich zneužitia (6). V praxi to znamená, že algoritmus môže pri odporúčaní príspevkov zohľadniť konkrétne vlastnosti používateľa. Napríklad používateľom v určitej vekovej skupine sa môžu častejšie zobrazovať trendy príspevky alebo videá populárne medzi ich vekovou skupinou, zatiaľ čo poloha môže ovplyvniť zobrazovanie miestnych udalostí, podnikov alebo obsahu v ich jazyku. Demografické filtrovanie tak umožňuje personalizovať odporúčaný obsah každého používateľa v kontexte jeho širšieho demografického profilu.
+
+
+\section{Feed} \label{tretia}
+
+
+
+
+\section{Explore} \label{stvrta}
+
+
+
+
+\section{Reels} \label{piata}
+
+
+
+\section{Záver} \label{siesta} % prípadne iný variant názvu
 \section{Literatúra} 
 
 
