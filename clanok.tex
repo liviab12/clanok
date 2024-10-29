@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage{multirow}
 
 \usepackage{cite}
 %\usepackage{times}
@@ -32,7 +33,7 @@
 \maketitle
 
 \begin{abstract}
-Cieľom článku je preskúmať a analyzovať odporúčacie systémy, ktoré Instagram používa na personalizáciu obsahu v jeho hlavných častiach: Feed, Explore a Reels. Článok sa zameria na to, ako algoritmy spracovávajú používateľské dáta, interakcie a preferencie na základe predchádzajúceho správania používateľov, aby efektívne odporúčali relevantný obsah.
+Cieľom článkuu je preskúmať a analyzovať odporúčacie systémy, ktoré Instagram používa na personalizáciu obsahu v jeho hlavných častiach: Feed, Explore a Reels. Článok sa zameria na to, ako algoritmy spracovávajú používateľské dáta, interakcie a preferencie na základe predchádzajúceho správania používateľov, aby efektívne odporúčali relevantný obsah.
 
 Prvá časť článku sa zameria na odporúčacie algoritmy sociálnych sietí, kde vysvetlíme ako všeobecne funguje odporúčanie obsahu na sociálnych sieťach, ktoré sa prejavuje aj v aplikácii Instagram. Na vysvetlenie tohto procesu predstavíme modely šírenia informácií a vysvetlíme metódy strojového učenia.
 
@@ -61,7 +62,7 @@ Prostredníctvom tejto analýzy jednotlivých častí aplikácie chceme poskytn�
 \section{Odporúčacie algoritmy sociálnych sietí} \label{druha}
 
 \subsection{Typy šírenia informácií na sociálnych sieťach} 
-Sociálne siete medzi ktoré patrí aj aplikácia Instagram využívajú na šírenie obsahu na platforme tri typy šírenia informácií - odber, sieť a algoritmus (1).
+Sociálne siete medzi ktoré patrí aj aplikácia Instagram využívajú na šírenie obsahu na platforme tri typy šírenia informácií - odber, sieť a algoritmus \cite{narayanan2023understanding}
 
 Model odberu predstavuje situáciu, kedy sa príspevok dostane k tým používateľom, ktorý odberajú daný profil na sociálnej sieti. Na Instagrame sa nám teda zobrazí príspevok profilu, ktorý máme medzi sledovanými účtami.
 
@@ -104,6 +105,35 @@ Demografické filtrovanie využíva na odporúčanie obsahu demografické údaje
 
 
 \section{Feed} \label{tretia}
+
+Instagram Feed predstavuje časť aplikácie, kde sa používateľom zobrazujú príspevky od účtov, ktoré sledujú, odporúčané príspevky a sponzorované príspevky (reklamy) od účtov, ktoré nesledujú. Táto časť aplikácie obsahuje príspevky v podobe fotiek aj videí.
+
+Napriek tomu, že vo svojich začiatok bola práve táto časť aplikácie zostavená chronologicky, a teda odporúčala príspevky v závislosti od ich aktuálnosti, v súčasnosti už nemôžeme hovoriť o čisto chronologickom usporiadaní príspevkov. Instagram sa v tomto prípade síce snaží odporúčať hlavne aktuálny obsah, ale pridáva k tomu aj snahu o relevantnosť, a teda snahu odporúča príspevky, ktoré by mohli ľudí zaujať. Využíva na to metódy strojového učenia a to konkrétne už spomínané hybridné filtrovanie (7). Spoločnosť Instagram urobila tento prechod z chronologického na súčasne aj algoritmické usporiadanie v marci 2016 a spôsobila si tým negatívne ohlasy zo strany používateľov, ktorý boli dovtedy zvyknutí na zobrazovanie príspevkov len v závislosti od času pridania príspevku (8). 
+
+Tabuľka nižšie popisuje faktory, ktoré ovplyvňujú pravdepodobnosť zobrazenia príspevkov v Instagram Feed. Zohľadňuje tri kľúčové aspekty: aktuálnosť príspevku, typ účtu a typ príspevku. Údaje v tabuľke sú založené na vlastnom pozorovaní zobrazovania obsahu v aplikácii a výsledné zistenia sú uvedené v percentách.
+
+V sekcii o aktuálnosti príspevku sa ukazuje, že najvyššia pravdepodobnosť zobrazenia (53 \%) sa týka príspevkov zverejnených do jednej hodiny za čím nasledujú príspevky zverejnené do dvanásť hodín (24\%). Z uvedeného vyplýva, že Instagram naozaj výrazne odporúča najaktuálnejší obsah, nakoľko príspevky nie staršie ako dvanásť hodín tvoria 77\% zobrazeného obsahu. V kategórii typ účtu dominujú sledované účty (60 \%), z čoho vyplýva, že sa tu z hľadiska typu šírenia informácií výrazne uplatňuje model odberu. Čo sa týka typu príspevku, videá majú vyššiu pravdepodobnosť zobrazenia. Pri analýze všetkých troch kategórií môžeme konštatovať, že sa používateľom v sekcii Feed najviac zobrazujú videá zverejnené účtami, ktoré sledujú, a to najmä príspevky nie staršie ako dvanásť hodín.
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|}
+\hline
+&Kritérium                  &Pravdepodobnosť zobrazenia \\
+\hline
+\multirow{4}{*}{Aktuálnosť príspevku}   	& do 1 hod                  & 53\%    \\ 
+                                        				& do 12 hod                & 24\%    \\ 
+                                       				 & do 24 hod               & 15\%    \\ 
+                                        				& viac ako 24 hod       & 8\%     \\
+                                        				\hline
+\multirow{3}{*}{Typ účtu}                             & Sledovaný                 & 60\%    \\
+                                        			         & Nesledovaný             & 22\%    \\
+                                        		                    & Sponzorovaný          & 18\%    \\ 
+                                                                          \hline
+\multirow{2}{*}{Typ príspevku}                    & Fotka                          & 38\%    \\
+                                                                         & Video                          & 62\%    \\ 
+                                                                         \hline
+\end{tabular}
+\caption{Pravdepodobnosť zobrazenia príspevkov v Instagram Feed}
+\end{table}
 
 
 
